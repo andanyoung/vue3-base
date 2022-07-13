@@ -26,7 +26,7 @@ import { createRouter, createWebHashHistory } from 'vue-router';
  * a base page that does not have permission requirements
  * all roles can be accessed
  */
-export const constantRoutes = [
+const constantRoutes = [
   {
     path: '/redirect',
     // component: Layout,
@@ -34,18 +34,18 @@ export const constantRoutes = [
     children: [
       {
         path: '/redirect/:path(.*)',
-        component: () => import('@/views/redirect'),
+        component: () => import('@/views/redirect.vue'),
       },
     ],
   },
   {
     path: '/404',
-    component: () => import('@/views/error/404'),
+    component: () => import('@/views/error/404.vue'),
     hidden: true,
   },
 ];
 
 export default createRouter({
-  constantRoutes,
-  history: createWebHashHistory,
+  routes: constantRoutes,
+  history: createWebHashHistory(),
 });
