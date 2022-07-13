@@ -28,6 +28,11 @@ import { createRouter, createWebHistory } from 'vue-router';
  */
 export const constantRoutes = [
   {
+    path: '/',
+    component: () => import('@/views/dashboard/index.vue'),
+    hidden: true,
+  },
+  {
     path: '/redirect',
     // component: Layout,
     hidden: true,

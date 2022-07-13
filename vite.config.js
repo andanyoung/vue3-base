@@ -4,6 +4,10 @@ import Components from 'unplugin-vue-components/vite';
 import vueSetupExtend from 'vite-plugin-vue-setup-extend';
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
 import { createHtmlPlugin } from 'vite-plugin-html';
+import styleImport, { AndDesignVueResolve } from 'vite-plugin-style-import';
+import AutoImport from 'unplugin-auto-import/vite';
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
+
 const path = require('path');
 
 // https://vitejs.dev/config/
@@ -24,6 +28,18 @@ export default ({ mode }) => {
             injectScript: `<script src="/inject.js"></script>`,
           },
         },
+      }),
+      // styleImport({
+      //   resolves: [AndDesignVueResolve()],
+      // }),
+      AutoImport({
+        imports: ['vue', 'vue-router', 'vuex', '@vueuse/head'],
+      }),
+      createSvgIconsPlugin({
+        // Specify the icon folder to be cached
+        iconDirs: [path.resolve(process.cwd(), 'src/assets/svg')],
+        // Specify symbolId format
+        symbolId: 'icon-[dir]-[name]',
       }),
     ],
     resolve: {
