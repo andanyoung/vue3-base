@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useStore } from 'vuex';
+import Logo from './Logo.vue';
 const store = useStore();
 defineProps({
   msg: String,
@@ -14,6 +15,7 @@ console.log('useStore', store.getters['user/name'], store.getters.username);
 </script>
 
 <template>
+  <Logo></Logo>
   <h1>{{ env }} {{ msg }} {{ store.getters.username }}</h1>
 
   <p>

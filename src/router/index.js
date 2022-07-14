@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
 /**
  * Note: sub-menu only appear when route children.length >= 1
@@ -28,6 +28,11 @@ import { createRouter, createWebHashHistory } from 'vue-router';
  */
 const constantRoutes = [
   {
+    path: '/',
+    component: () => import('@/views/dashboard/index.vue'),
+    hidden: true,
+  },
+  {
     path: '/redirect',
     // component: Layout,
     hidden: true,
@@ -47,5 +52,5 @@ const constantRoutes = [
 
 export default createRouter({
   routes: constantRoutes,
-  history: createWebHashHistory(),
+  history: createWebHistory(),
 });
