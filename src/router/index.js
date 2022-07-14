@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import Layout from '@/layout/index.vue';
 
 /**
  * Note: sub-menu only appear when route children.length >= 1
@@ -22,14 +23,55 @@ import { createRouter, createWebHistory } from 'vue-router';
  */
 
 /**
- * constantRoutes 静态路由
+ *  静态路由
  * a base page that does not have permission requirements
  * all roles can be accessed
  */
 const constantRoutes = [
   {
     path: '/',
-    component: () => import('@/views/dashboard/index.vue'),
+    component: Layout,
+    children: [
+      {
+        path: 'dashboard',
+        component: () => import('@/views/dashboard/index.vue'),
+        name: 'Dashboard',
+        meta: { title: 'Dashboard', icon: 'dashboard', affix: true },
+      },
+    ],
+  },
+  {
+    path: '/213',
+    component: Layout,
+    children: [
+      {
+        path: 'dashboard',
+        component: () => import('@/views/dashboard/index.vue'),
+        name: 'Dashboard',
+        meta: { title: 'Dashboard', icon: 'dashboard', affix: true },
+      },
+      {
+        path: 'dashboard',
+        component: () => import('@/views/dashboard/index.vue'),
+        name: 'Dashboard',
+        meta: { title: 'Dashboard', icon: 'dashboard', affix: true },
+      },
+    ],
+  },
+  {
+    path: '/test',
+    component: () => import('@/views/test/index.vue'),
+    hidden: true,
+  },
+  {
+    path: '/error/404',
+    component: () => import('@/views/error/404.vue'),
+    hidden: true,
+  },
+
+  {
+    path: '/409',
+    component: () => import('@/views/error/404.vue'),
     hidden: true,
   },
   {

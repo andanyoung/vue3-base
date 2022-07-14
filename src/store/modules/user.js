@@ -3,12 +3,12 @@ const state = () => ({
   name: 'admin',
 });
 
-// getters
-const getters = {
-  name: (state, getters, rootState) => {
-    return state.name;
-  },
-};
+// // getters
+// const getters = {
+//   name: (state, getters, rootState) => {
+//     return state.name;
+//   },
+// };
 
 // actions
 const actions = {};
@@ -19,7 +19,7 @@ const mutations = {};
 export default {
   namespaced: true,
   state,
-  getters,
+  // getters,
   actions,
   mutations,
 };
