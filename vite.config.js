@@ -7,6 +7,7 @@ import { createHtmlPlugin } from 'vite-plugin-html';
 import styleImport, { AndDesignVueResolve } from 'vite-plugin-style-import';
 import AutoImport from 'unplugin-auto-import/vite';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
+ 
 
 const path = require('path');
 

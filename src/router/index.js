@@ -47,13 +47,13 @@ const constantRoutes = [
       {
         path: 'dashboard',
         component: () => import('@/views/dashboard/index.vue'),
-        name: 'Dashboard',
+        name: 'Dashboard1',
         meta: { title: 'Dashboard', icon: 'dashboard', affix: true },
       },
       {
         path: 'dashboard',
         component: () => import('@/views/dashboard/index.vue'),
-        name: 'Dashboard',
+        name: 'Dashboard2',
         meta: { title: 'Dashboard', icon: 'dashboard', affix: true },
       },
     ],

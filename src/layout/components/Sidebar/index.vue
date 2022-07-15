@@ -51,5 +51,6 @@ computed(() => {
   console.log('menu appRoutes', appRoutes);
   return appRoutes;
 });
-console.log('menu', username1);
+
+console.log('menu', JSON.stringify(store.getters.appRoutes));
 </script>
