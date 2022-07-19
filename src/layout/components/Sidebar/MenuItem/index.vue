@@ -1,23 +1,11 @@
 <template>
   <template v-if="!item.hidden || item.hidden === undefined">
-    <Link v-if="!hasOneShowingChild && !onlyOneChild" :item="item">
-      <a-menu-item :key="item.id || item.name">
-        <span> {{ title }} </span>
-        <template v-if="item.meta && item.meta.icon" #icon>
-          <svg-icon :name="item.meta.icon"></svg-icon>
-        </template>
-      </a-menu-item>
-    </Link>
-    <Link v-else-if="!hasOneShowingChild && onlyOneChild" :item="onlyOneChild">
-      <a-menu-item :key="onlyOneChild.id || onlyOneChild.name">
-        <span>{{
-          onlyOneChild.meta ? onlyOneChild.meta.title : onlyOneChild.name
-        }}</span>
-        <template v-if="onlyOneChild.meta && onlyOneChild.meta.icon" #icon>
-          <svg-icon :name="onlyOneChild.meta.icon"></svg-icon>
-        </template>
-      </a-menu-item>
-    </Link>
+    <Item v-if="!hasOneShowingChild && !onlyOneChild" :item="item"></Item>
+
+    <Item
+      v-else-if="!hasOneShowingChild && onlyOneChild"
+      :item="onlyOneChild"
+    ></Item>
     <template v-else>
       <a-sub-menu :key="item.id || item.name">
         <template v-if="item.meta && item.meta.icon" #icon>
@@ -26,11 +14,11 @@
         <template #title>
           <span> {{ title }} </span>
         </template>
-        <sidebar-item
+        <menu-item
           v-for="v in showingChildren"
           :key="v.id || v.name"
           :item="v"
-        ></sidebar-item>
+        ></menu-item>
       </a-sub-menu>
     </template>
   </template>
@@ -38,7 +26,8 @@
 
 <script setup>
 import SvgIcon from '@/components/SvgIcon.vue';
-import Link from './link.vue';
+import Item from './Item.vue';
+import MenuItem from './index.vue';
 let props = defineProps({
   item: {
     type: Object,
@@ -54,13 +43,15 @@ const showingChildren = computed(() => {
   ) {
     return null;
   }
-  return props.item.children.filter((i) => {
+  let a = props.item.children.filter((i) => {
     if (i.hidden) {
       return false;
     } else {
       return true;
     }
   });
+  console.log('aa', a);
+  return a;
 });
 /**
  * 是否展示子菜单
