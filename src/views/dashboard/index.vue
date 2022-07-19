@@ -1,10 +1,5 @@
 <template>
-  <svg-icon
-    name="http://localhost:8086/bug.svg"
-    class="icon"
-    :size="300"
-    :color="'blue'"
-  ></svg-icon>
+  <svg-icon name="bug" size="300px" :color="'blue'"></svg-icon>
   <Logo></Logo>
 </template>
 <script setup name="dashboard">

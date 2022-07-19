@@ -2,7 +2,7 @@
   <div class="logo-container">
     <transition name="sidebarLogoFade">
       <router-link key="collapse" class="logo-link" to="/">
-        <img v-if="logo" :src="`src/assets/images/logo.png`" class="logo" />
+        <img v-if="logo" :src="logo" class="logo" />
         <h1 v-if="collapse" class="logo-title">{{ title }}</h1>
       </router-link>
     </transition>
@@ -10,8 +10,9 @@
 </template>
 
 <script setup name="logo">
-let logo = ref(`src/assets/images/logo.png`);
-let title = ref('Admin4j-Vue');
+import logo from '@/assets/images/logo.png';
+
+let title = ref('Admin4j');
 defineProps({
   collapse: {
     type: Boolean,
@@ -24,7 +25,7 @@ defineProps({
 .logo-container {
   display: inline;
   position: relative;
-  background-color: rgb(0, 255, 55);
+  // background-color: rgb(0, 255, 55);
   width: 100px;
   height: 50px;
   line-height: 50px;

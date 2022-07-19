@@ -1,7 +1,7 @@
-import router from '@/router';
+import constantRoutes from '@/router/constantRoutes';
 
 const state = () => ({
-  routes: router.options.routes,
+  routes: constantRoutes,
 });
 
 // actions
