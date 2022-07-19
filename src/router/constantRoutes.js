@@ -98,7 +98,7 @@ export default [
   {
     name: '409',
     path: '/409',
-    component: () => import('@/views/error/404.vue'),
+    component: () => import('@/views/error/Error404.vue'),
     hidden: false,
   },
   {
@@ -115,7 +115,7 @@ export default [
   },
   {
     path: '/404',
-    component: () => import('@/views/error/404.vue'),
+    component: () => import('@/views/error/Error404.vue'),
     name: '404',
     hidden: true,
   },
