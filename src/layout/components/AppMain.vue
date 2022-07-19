@@ -1,14 +1,12 @@
 <template>
   <section class="app-main">
     <router-view v-slot="{ Component, route }">
-      <transition :name="route.meta.transition || 'fade'" mode="out-in">
-        <keep-alive>
-          <component
-            :is="Component"
-            :key="route.meta.name ? route.path : undefined"
-          />
-        </keep-alive>
-      </transition>
+      <keep-alive>
+        <component
+          :is="Component"
+          :key="route.meta.name ? route.path : undefined"
+        />
+      </keep-alive>
     </router-view>
   </section>
 </template>

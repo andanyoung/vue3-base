@@ -67,16 +67,36 @@ export default [
   },
   {
     path: '/test',
-    component: () => import('@/views/test/index.vue'),
-    hidden: false,
+    component: Layout,
+    name: 'test1321',
+    meta: { icon: '404', title: 'error' },
+    children: [
+      {
+        path: '/12',
+        component: () => import('@/views/test/test.vue'),
+        name: 'test1',
+        meta: { title: 'test', icon: 'bug', affix: true },
+      },
+    ],
   },
   {
+    name: 'error-404',
     path: '/error/404',
-    component: () => import('@/views/error/404.vue'),
+    component: Layout,
     hidden: false,
+    meta: { icon: '404', title: 'error' },
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/test/test.vue'),
+        name: 'test-error',
+        meta: { title: 'test-404', icon: 'bug' },
+      },
+    ],
   },
 
   {
+    name: '409',
     path: '/409',
     component: () => import('@/views/error/404.vue'),
     hidden: false,
@@ -85,6 +105,7 @@ export default [
     path: '/redirect',
     // component: Layout,
     hidden: true,
+    name: 'redirect',
     children: [
       {
         path: '/redirect/:path(.*)',
@@ -95,6 +116,7 @@ export default [
   {
     path: '/404',
     component: () => import('@/views/error/404.vue'),
+    name: '404',
     hidden: true,
   },
 ];
