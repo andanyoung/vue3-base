@@ -114,7 +114,7 @@ export default [
     ],
   },
   {
-    path: '/404',
+    path: '/:pathMatch(.*)*',
     component: () => import('@/views/error/Error404.vue'),
     name: '404',
     hidden: true,
