@@ -7,7 +7,6 @@ import { createHtmlPlugin } from 'vite-plugin-html';
 import styleImport, { AndDesignVueResolve } from 'vite-plugin-style-import';
 import AutoImport from 'unplugin-auto-import/vite';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
- 
 
 const path = require('path');
 
@@ -47,6 +46,14 @@ export default ({ mode }) => {
       // 配置路径别名
       alias: {
         '@': path.resolve(__dirname, './src'),
+      },
+    },
+    css: {
+      //css预处理
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "@/assets/scss/index.scss";',
+        },
       },
     },
     server: {

@@ -1,0 +1,19 @@
+.brand-logo {
+  display: flex;
+  align-items: center;
+  //   margin-top: 1.35rem;
+  font-size: inherit;
+  img {
+    max-width: 36px;
+  }
+  .brand-text {
+    font-weight: bold;
+    color: $primary;
+    padding-left: 1rem;
+    margin-bottom: 0;
+    // font-weight: 600;
+    letter-spacing: 0.01rem;
+    font-size: 1.45rem;
+    animation: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) 0s normal forwards 1 fadein;
+  }
+}

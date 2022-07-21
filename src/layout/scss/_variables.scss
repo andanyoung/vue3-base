@@ -1,0 +1,44 @@
+// !default表示默认值。给一个未通过!default声明赋值的变量赋值，此时，如果变量已经被赋值，不会再被重新赋值;但是如果变量还没有被赋值，则会被赋予新的值。
+$purple: #7367f0 !default; //$primary
+$green: #28c76f !default; //$success
+$blue: #00cfe8 !default; //$info
+$orange: #ff9f43 !default; //$warning
+$red: #ea5455 !default; //$danger
+
+//主色调
+$primary: $purple !default;
+//次要色调
+$secondary: #82868b !default;
+$info: $blue !default;
+$warning: $orange !default;
+$light: #f6f6f6 !default;
+$dark: #4b4b4b !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg: #f8f8f8 !default;
+$body-color: #6e6b7b !default;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: $primary !default;
+$link-hover-color: darken($link-color, 5%) !default;
+$link-hover-decoration: none !default;
+
+// shadow
+$box-shadow: 0 4px 24px 0 rgba(#22292f, 0.1) !default;
+
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: 'Montserrat', Helvetica, Arial, serif !default;
+$font-family-monospace: 'Montserrat', Helvetica, Arial, serif !default;
+
+// stylelint-enable value-keyword-case
+$font-size-base: 1rem !default;
+$font-size-lg: ceil($font-size-base * 1.25) !default;
+$font-size-sm: ceil($font-size-base * 0.85) !default;

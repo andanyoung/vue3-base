@@ -1,6 +1,6 @@
 <template>
   <a-layout-sider>
-    <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
+    <a-menu v-model:selectedKeys="selectedKeys" theme="light" mode="inline">
       <template v-for="v in $store.getters.appRoutes" :key="v.id || v.name">
         <MenuItem :item="v"></MenuItem>
       </template>

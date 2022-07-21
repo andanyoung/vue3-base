@@ -109,7 +109,7 @@ export default [
     children: [
       {
         path: '/redirect/:path(.*)',
-        component: () => import('@/views/redirect.vue'),
+        component: () => import('@/views/error/redirect.vue'),
       },
     ],
   },

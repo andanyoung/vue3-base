@@ -1,9 +1,11 @@
 <template>
   <!-- Error page-->
-  <div class="misc-wrapper">
-    <Logo class="brand-logo"></Logo>
+  <div class="error-wrapper">
+    <div class="m-8 sm:m-4 md:m-6">
+      <Logo class="brand-logo"></Logo>
+    </div>
 
-    <div class="misc-inner p-2 sm:p-4 max-w-7xl">
+    <div class="p-2 sm:p-4 max-w-7xl">
       <div class="w-4/5 text-center mx-auto">
         <a-typography-title class="mb-1">Page Not Found 🕵🏻‍♀️</a-typography-title>
         <p class="mb-2">
@@ -36,25 +38,13 @@ import { getAssetsImage } from '@/util/AssetsFileUtil';
 </script>
 
 <style lang="scss" scoped>
-.misc-wrapper {
-  width: 100%;
-  display: flex;
-  flex-basis: 100%;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-
-  .brand-logo {
-    width: auto;
-    left: 2rem;
-    margin: 0;
-    position: absolute;
-    top: 2rem;
-    display: inline;
-  }
-  .misc-inner {
-    position: relative;
-    // max-width: 750px;
-  }
-}
+// .error-wrapper {
+// }
+// .brand-logo {
+//   left: 2rem;
+//   margin: 0;
+//   // position: absolute;
+//   top: 2rem;
+//   // display: block;
+// }
 </style>
