@@ -56,7 +56,9 @@ export default ({ mode }) => {
         },
       },
     },
+
     server: {
+      // hmr: true,
       port: 8086,
       open: true,
       // proxy: {

@@ -96,6 +96,12 @@ export default [
   },
 
   {
+    name: 'login',
+    path: '/login',
+    component: () => import('@/views/authentication/Login.vue'),
+    hidden: false,
+  },
+  {
     name: '409',
     path: '/409',
     component: () => import('@/views/error/Error404.vue'),
