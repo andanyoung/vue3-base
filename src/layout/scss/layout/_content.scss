@@ -1,0 +1,13 @@
+html {
+  //   font-size: $base-font-size;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  letter-spacing: 0.01rem;
+  body {
+    height: 100%;
+    background-color: $body-bg;
+    #app {
+      height: 100%;
+    }
+  }
+}

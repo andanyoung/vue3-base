@@ -2,6 +2,7 @@ import constantRoutes from '@/router/constantRoutes';
 
 const state = () => ({
   routes: constantRoutes,
+  title: 'Admin4j',
 });
 
 // actions
