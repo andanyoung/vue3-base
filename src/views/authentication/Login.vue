@@ -1,6 +1,6 @@
 <template>
   <!-- Brand logo-->
-  <Logo class="mt-8 ml-8 absolute"></Logo>
+  <Logo class="pt-8 pl-8 absolute z-50"></Logo>
   <!-- /Brand logo-->
   <a-row class="auth-inner m-0 h-full">
     <!-- Left Text-->
