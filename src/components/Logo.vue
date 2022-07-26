@@ -1,5 +1,5 @@
 <template>
-  <router-link class="brand-logo" to="/">
+  <router-link class="brand-logo" :to="redirect">
     <img v-if="logo" :src="logo" class="logo" />
     <h1 v-if="collapse" class="brand-text">{{ $store.getters.title }}</h1>
   </router-link>
@@ -12,6 +12,10 @@ defineProps({
   collapse: {
     type: Boolean,
     default: true,
+  },
+  redirect: {
+    type: String,
+    default: '/',
   },
 });
 </script>

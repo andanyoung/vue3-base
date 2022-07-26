@@ -1,6 +1,6 @@
 <template>
   <!-- Brand logo-->
-  <Logo class="pt-8 pl-8 absolute z-50"></Logo>
+  <Logo class="pt-8 pl-8 absolute z-50" redirect=""></Logo>
   <!-- /Brand logo-->
   <a-row class="auth-inner m-0 h-full">
     <!-- Left Text-->
@@ -96,12 +96,16 @@
 
 <script setup>
 import imgUrl from '@/assets/images/login/login-v2.svg';
+import { useRoute, useRouter } from 'vue-router';
 const formState = reactive({ username: '', password: '', remember: true });
 const signBtnDisabled = computed(() => {
   return !(formState.username && formState.password);
 });
 
-function onFinish() {}
+const router = useRouter();
+function onFinish() {
+  router.replace('/');
+}
 </script>
 
 <style lang="scss" scoped></style>

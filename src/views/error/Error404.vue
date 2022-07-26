@@ -27,6 +27,6 @@
 </template>
 
 <script setup>
-import Logo from '../../components/Logo.vue';
+import Logo from '@/components/Logo.vue';
 import { getAssetsImage } from '@/util/AssetsFileUtil';
 </script>
