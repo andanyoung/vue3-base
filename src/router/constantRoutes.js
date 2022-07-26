@@ -30,9 +30,11 @@ export default [
     path: '/',
     component: Layout,
     name: 'Dashboard',
+    id: 1,
     meta: { title: 'Dashboard', icon: 'dashboard', affix: true },
   },
   {
+    id: 2,
     path: '/213',
     component: Layout,
     meta: { title: '多级菜单', icon: 'dashboard', affix: true },

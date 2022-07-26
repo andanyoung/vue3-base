@@ -1,10 +1,10 @@
 <template>
   <Link v-if="!hasOneShowingChild && !onlyOneChild" :item="item">
     <a-menu-item :key="item.id || item.name">
-      <span> {{ title }} </span>
       <template v-if="item.meta && item.meta.icon" #icon>
         <svg-icon :name="item.meta.icon"></svg-icon>
       </template>
+      <span> {{ title }} </span>
     </a-menu-item>
   </Link>
 </template>
