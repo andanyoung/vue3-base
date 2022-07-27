@@ -1,3 +1,7 @@
+$base-font-size: 14px !default;
+$body-direction: ltr !default;
+$content-padding: 2rem !default;
+
 // !default表示默认值。给一个未通过!default声明赋值的变量赋值，此时，如果变量已经被赋值，不会再被重新赋值;但是如果变量还没有被赋值，则会被赋予新的值。
 $purple: #7367f0 !default; //$primary
 $green: #28c76f !default; //$success
@@ -42,3 +46,11 @@ $font-family-monospace: 'Montserrat', Helvetica, Arial, serif !default;
 $font-size-base: 1rem !default;
 $font-size-lg: ceil($font-size-base * 1.25) !default;
 $font-size-sm: ceil($font-size-base * 0.85) !default;
+
+//  ------------------------------
+//    Navbar
+//  ------------------------------
+$navbar-height: 4.45rem !default;
+$horizontal-menu-height: 4.45rem !default;
+$footer-height: 3.35rem !default;
+$floating-nav-margin: 1.3rem;

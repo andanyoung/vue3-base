@@ -1,13 +1,31 @@
 html {
-  //   font-size: $base-font-size;
+  font-size: $base-font-size;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   letter-spacing: 0.01rem;
   body {
     height: 100%;
     background-color: $body-bg;
+    direction: $body-direction;
     #app {
       height: 100%;
+    }
+  }
+
+  #app {
+    padding: 0;
+    position: relative;
+    transition: 300ms ease all;
+    backface-visibility: hidden;
+    min-height: calc(100% - #{$footer-height});
+    .app-main {
+      padding: calc(
+          #{$content-padding} + #{$navbar-height} + #{$floating-nav-margin}
+        )
+        #{$content-padding} 0;
+      min-height: calc(100% - #{$footer-height});
+      position: relative;
+      overflow: hidden;
     }
   }
 }

@@ -1,4 +1,15 @@
 <template>
+  <div class="vertical-layout h-100">
+    <header class="header header-shadow"></header>
+
+    <div class="main-menu">
+      <div class="logo-container">
+        <Logo />
+      </div>
+
+      <Sidebar />
+    </div>
+  </div>
   <a-layout>
     <a-layout-sider
       breakpoint="sm"
@@ -7,15 +18,9 @@
       width="260"
       :trigger="null"
     >
-      <div class="logo-container">
-        <Logo />
-      </div>
-
-      <Sidebar />
     </a-layout-sider>
 
     <a-layout>
-      <header class="header header-shadow"></header>
       <a-layout-content>
         <AppMain></AppMain>
       </a-layout-content>
