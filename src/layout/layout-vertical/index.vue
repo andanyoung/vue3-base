@@ -48,6 +48,7 @@ import Sidebar from '../components/Sidebar/index.vue';
 
 .ant-layout {
   background-color: $body-bg;
+  height: 100%;
   .logo-container {
     height: $navbar-height;
     text-align: center;

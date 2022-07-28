@@ -18,14 +18,14 @@ html {
     transition: 300ms ease all;
     backface-visibility: hidden;
     min-height: calc(100% - #{$footer-height});
-    .app-main {
-      padding: calc(
-          #{$content-padding} + #{$navbar-height} + #{$floating-nav-margin}
-        )
-        #{$content-padding} 0;
-      min-height: calc(100% - #{$footer-height});
-      position: relative;
-      overflow: hidden;
-    }
+    // .app-main {
+    //   padding: calc(
+    //       #{$content-padding} + #{$navbar-height} + #{$floating-nav-margin}
+    //     )
+    //     #{$content-padding} 0;
+    //   min-height: calc(100% - #{$footer-height});
+    //   position: relative;
+    //   overflow: hidden;
+    // }
   }
 }
